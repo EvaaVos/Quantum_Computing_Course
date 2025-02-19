@@ -1,0 +1,53 @@
+%matplotlib inline
+# Importing standard Qiskit libraries and configuring account
+from qiskit import *
+from qiskit import QuantumCircuit, execute, Aer, IBMQ
+from qiskit.compiler import transpile, assemble
+from qiskit import *
+from qiskit.visualization import plot_histogram
+from qiskit.tools.monitor import job_monitor
+from qiskit.tools.jupyter import *
+from qiskit.visualization import *
+# Loading your IBM Q account(s)
+provider = IBMQ.load_account()
+
+#Bell state |+ > circuit.
+
+q=QuantumRegister(2,'q')
+c=ClassicalRegister(2,'c')
+circuit=QuantumCircuit(q,c)
+circuit.h(q[0])
+circuit.cx(q[0],q[1])
+circuit.measure(q,c)
+
+
+#Bell state |- > circuit.
+
+q=QuantumRegister(2,'q')
+c=ClassicalRegister(2,'c')
+circuit=QuantumCircuit(q,c)
+circuit.x(q[0])
+circuit.h(q[0])
+circuit.cx(q[0],q[1])
+circuit.measure(q,c)
+
+# Choose the simulator. 
+
+for backend in provider.backends():
+    print (backend.name())
+provider = IBMQ.load_account()
+
+provider = IBMQ.load_account()
+simulator =Aer.get_backend('ibm-melbourne')
+
+# Run the calculation. 
+
+job=execute(circuit,simulator,shots=1024)
+
+
+# Obtain results. 
+
+results=job.result().get_counts()
+
+plot_histogram(results) 
+
