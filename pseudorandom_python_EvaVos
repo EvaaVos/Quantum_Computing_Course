@@ -1,0 +1,6 @@
+from random import *
+import random
+
+random.seed(3)
+
+print (randint(0,15)) 

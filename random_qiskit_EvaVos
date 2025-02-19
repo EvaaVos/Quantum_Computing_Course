@@ -1,0 +1,53 @@
+%matplotlib inline
+# Importing standard Qiskit libraries and configuring account
+from qiskit import *
+from qiskit import QuantumCircuit, execute, Aer, IBMQ
+from qiskit.compiler import transpile, assemble
+from qiskit import *
+from qiskit.visualization import plot_histogram
+from qiskit.tools.monitor import job_monitor
+from qiskit.tools.jupyter import *
+from qiskit.visualization import *
+# Loading your IBM Q account(s)
+provider = IBMQ.load_account()
+
+#Create the quantum circuit.
+
+q=QuantumRegister(4,'q')
+c=ClassicalRegister(4,'c')
+circuit=QuantumCircuit(q,c)
+circuit.h(q)
+circuit.measure(q,c)
+
+circuit.draw(output='mpl')
+
+# Choose the simulator. 
+
+for backend in provider.backends():
+    print (backend.name())
+provider = IBMQ.load_account()
+
+# Obtain the result.
+
+provider = IBMQ.load_account()
+simulator =Aer.get_backend('qasm_simulator')
+
+job=execute(circuit,simulator,shots=1)
+
+counts=job.result().get_counts()
+
+number=str(counts)
+
+numero1=number[2]
+numero2=number[3]
+numero3=number[4]
+numero4=number[5]
+
+int_num1=int(numero1)
+int_num2=int(numero2)
+int_num3=int(numero3)
+int_num4=int(numero4)
+
+print (int_num1*1+int_num2*2+int_num3*4+int_num4*8)
+
+
