@@ -1,0 +1,71 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNm/LzdniyTdW9pvG2cqB0J",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/EvaaVos/Quantum_Computing_Course/blob/main/PennyLane/Introduction_PennyLane\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 344
+        },
+        "id": "88NeP2A0PUTx",
+        "outputId": "817ebf71-db43-4329-8597-8b472e24211f"
+      },
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "ModuleNotFoundError",
+          "evalue": "No module named 'pennylane'",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mModuleNotFoundError\u001b[0m                       Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-1-2027371346>\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mjson\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0;32mimport\u001b[0m \u001b[0mpennylane\u001b[0m \u001b[0;32mas\u001b[0m \u001b[0mqml\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      3\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mpennylane\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mnumpy\u001b[0m \u001b[0;32mas\u001b[0m \u001b[0mnp\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mModuleNotFoundError\u001b[0m: No module named 'pennylane'",
+            "",
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0;32m\nNOTE: If your import is failing due to a missing package, you can\nmanually install dependencies using either !pip or !apt.\n\nTo view examples of installing some common dependencies, click the\n\"Open Examples\" button below.\n\u001b[0;31m---------------------------------------------------------------------------\u001b[0m\n"
+          ],
+          "errorDetails": {
+            "actions": [
+              {
+                "action": "open_url",
+                "actionText": "Open Examples",
+                "url": "/notebooks/snippets/importing_libraries.ipynb"
+              }
+            ]
+          }
+        }
+      ],
+      "source": [
+        "import json\n",
+        "import pennylane as qml\n",
+        "import pennylane.numpy as np"
+      ]
+    }
+  ]
+}
